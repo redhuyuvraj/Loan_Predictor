@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Loan Approval Form</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="age"><br>
+        Experience: <input type="number" name="experience"><br>
+        Income: <input type="number" name="income"><br>
+        Family Members: <input type="number" name="family"><br>
+        CC Avg (in $000s): <input type="number" step="0.1" name="ccavg"><br>
+        Education (1=Undergrad, 2=Graduate, 3=Advanced): <input type="number" name="education"><br>
+        Mortgage: <input type="number" name="mortgage"><br>
+        Securities Account (0 or 1): <input type="number" name="securities_account"><br>
+        CD Account (0 or 1): <input type="number" name="cd_account"><br>
+        Online (0 or 1): <input type="number" name="online"><br>
+        Credit Card (0 or 1): <input type="number" name="creditcard"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
